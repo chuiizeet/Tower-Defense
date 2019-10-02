@@ -47,3 +47,12 @@ TagManager:
   - name: Roads
     uniqueID: 82230619
     locked: 0
+  - name: Trees
+    uniqueID: 423504261
+    locked: 0
+  - name: Fences
+    uniqueID: 3413309951
+    locked: 0
+  - name: Buildings
+    uniqueID: 3558196293
+    locked: 0
