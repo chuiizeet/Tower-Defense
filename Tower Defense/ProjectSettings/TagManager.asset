@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Grass and Dirt
+    uniqueID: 2031752663
+    locked: 0
+  - name: Roads
+    uniqueID: 82230619
+    locked: 0
