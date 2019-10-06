@@ -7,5 +7,19 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skeleton Berserker
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 2916fcee844404652a73d3d4174b1aa0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bff2bfa17990c452188e53da3c50d074, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5ca3c15fc4c144e27984c2c745b8a8e4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c01625774c4bb4c26a10ed040de236bd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c6b137856b0b64343985bf79dec868e5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9233521ceda5c4dbea8bfd6729a1ed85, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f5c47062ae9934e82b033e5839b223aa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5fa6316e8872e4f04a72fa0af51fbf4a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ad78c14c088384855ace8f326352287b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6ed6ed803208b40de82763d19aa5adbb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f53012836606f40c886632d3d938b811, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6982854077a0549658c6073ea31018f5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b7f582e85f0a64a09b97c140be996e9e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5dae3ec8c7ebf40969eea2b6415229f7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 95d2167fd16bf4e7eacbeb708cddfa88, type: 2}
