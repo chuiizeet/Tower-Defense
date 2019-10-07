@@ -62,7 +62,7 @@ public class WaveController : MonoBehaviour
             }
             else
             {
-                InitCurrentWave()
+                InitCurrentWave();
             }
         }
     }
