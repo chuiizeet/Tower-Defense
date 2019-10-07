@@ -10,8 +10,23 @@ public class AutoMovement : MonoBehaviour
 
     private NavigationNode targetNode;
 
+    public NavigationNode StartingNode {
+        get { return startingNode; }
+        set { 
+            if (startingNode == null) {
+                startingNode = value;
+                InitializeStartingNode();
+            }
+         }
+    }
+
     void Start()
     { 
+        InitializeStartingNode();
+    }
+
+    private void InitializeStartingNode()
+    {
         targetNode = startingNode;
     }
 

@@ -20,4 +20,14 @@ public class PausableTime : MonoBehaviour
     {
         Timer = 0.0f;
     }
+
+    protected IEnumerator WaitForTime(float timeToWait)
+    {
+        var timer = 0.0f;
+        while (Timer <= timeToWait) {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        yield return null;
+    }
 }

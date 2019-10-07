@@ -5,6 +5,7 @@ using System;
 
 public abstract class Wave : PausableTime
 {
+    [SerializeField] protected List<SpawnInstruction> spawnInstructions = new List<SpawnInstruction>();
     protected int currentInstructionIndex;
 
     public event EventHandler<EventArgTemplate<bool>> WaveCompleted;
