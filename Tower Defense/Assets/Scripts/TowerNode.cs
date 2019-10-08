@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class TowerNode : MonoBehaviour
 {
-    // TODO: Tower Selection UI
+    [SerializeField] private TowerNodeUIController selectionUI;
 
     private GameObject placedTower;
 
@@ -18,17 +19,20 @@ public class TowerNode : MonoBehaviour
 
     private void Awake()
     {
-        // TODO: Assert -- Tower Selection UI != null
+        Assert.IsNotNull(selectionUI);
     }
 
     private void Start()
     {
-        
+        selectionUI.gameObject.SetActive(false);
+        selectionUI.CloseButtonPressed += OnCloseRequested;
+        selectionUI.PurchasedTower += OnTowerPurchased;
     }
 
     private void ToggleSelectionUI()
     {
-
+        var uiGameObject = selectionUI.gameObject;
+        uiGameObject.SetActive(!uiGameObject.activeSelf);
     }
 
     private void OnTowerPurchased(object sender, EventArgTemplate<TowerConfiguration> purchasedTower)
@@ -46,7 +50,7 @@ public class TowerNode : MonoBehaviour
 
     public void OnCloseRequested()
     {
-
+        selectionUI.gameObject.SetActive(false);
     }
 
     public void OnNodeSelected()
