@@ -13,8 +13,11 @@ GameObject:
   - component: {fileID: 7189200551634022055}
   - component: {fileID: 172734512272445513}
   - component: {fileID: 1927232970}
-  - component: {fileID: 1927232969}
   - component: {fileID: 3638949542351492541}
+  - component: {fileID: 255163181}
+  - component: {fileID: 255163183}
+  - component: {fileID: 4522783440146873756}
+  - component: {fileID: 2362360942915469664}
   m_Layer: 0
   m_Name: Skeleton Captain
   m_TagString: Untagged
@@ -151,7 +154,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1927232969
+--- !u!70 &3638949542351492541
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189200551634022054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  m_Size: {x: 1.55, y: 2.6}
+  m_Direction: 0
+--- !u!114 &255163181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189200551634022054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d986cd86375c44c91b8927638c89b63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &255163183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,19 +196,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingNode: {fileID: 0}
   speed: 0.05
---- !u!70 &3638949542351492541
-CapsuleCollider2D:
+--- !u!114 &4522783440146873756
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7189200551634022054}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09}
-  m_Size: {x: 1.55, y: 2.6}
-  m_Direction: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20da19cbe5bc4f809745c377a69741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  damagingTags: []
+--- !u!114 &2362360942915469664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189200551634022054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb32849d9e847e38fe6f7639122a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types: 01000000

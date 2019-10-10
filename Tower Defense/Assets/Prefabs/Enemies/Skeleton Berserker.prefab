@@ -13,8 +13,11 @@ GameObject:
   - component: {fileID: 3228529440861394585}
   - component: {fileID: 3376037618924846457}
   - component: {fileID: 2139972210}
-  - component: {fileID: 2139972209}
   - component: {fileID: 5575071743353319920}
+  - component: {fileID: 1506383315}
+  - component: {fileID: 1506383317}
+  - component: {fileID: 1419971088836613544}
+  - component: {fileID: 7054776452516298}
   m_Layer: 0
   m_Name: Skeleton Berserker
   m_TagString: Untagged
@@ -151,20 +154,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2139972209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3228529440861394586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90c9d8743687f4e028b3a692c8526e47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingNode: {fileID: 0}
-  speed: 0.05
 --- !u!70 &5575071743353319920
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,3 +170,56 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1.55, y: 2.4}
   m_Direction: 0
+--- !u!114 &1506383315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228529440861394586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d986cd86375c44c91b8927638c89b63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1506383317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228529440861394586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c9d8743687f4e028b3a692c8526e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingNode: {fileID: 0}
+  speed: 0.05
+--- !u!114 &1419971088836613544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228529440861394586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20da19cbe5bc4f809745c377a69741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  damagingTags: []
+--- !u!114 &7054776452516298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228529440861394586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cb32849d9e847e38fe6f7639122a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types: 01000000
