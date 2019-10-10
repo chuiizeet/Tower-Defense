@@ -20,15 +20,6 @@ public class TowerPurchaseButtonController : MonoBehaviour
 
     public void onTowerSelected()
     {
-        SafelyBroadcastEvent(ref TowerPurchased, tower);
-    }
-
-    private void SafelyBroadcastEvent<T>(ref EventHandler<EventArgTemplate<T>> eventToBroadcast, T dataToAttach)
-    {
-        if (eventToBroadcast != null)
-        {
-            var attachment = new EventArgTemplate<T>(dataToAttach);
-            eventToBroadcast.Invoke(this, attachment);
-        }
+        SafeEventHandler.SafelyBroadcastEvent(ref TowerPurchased, tower, this);
     }
 }

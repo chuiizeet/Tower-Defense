@@ -26,7 +26,7 @@ public class WaveController : MonoBehaviour
         else 
         {
             print("No waves on wave controller");
-            SafelyEmitEvent(ref WavesCompleted);
+            SafeEventHandler.SafelyBroadcastAction(ref WavesCompleted);
         }
     }
 
@@ -42,12 +42,12 @@ public class WaveController : MonoBehaviour
     {
         if (currentWaveIndex >= waves.Count)
         {
-            SafelyEmitEvent(ref WavesCompleted);
+            SafeEventHandler.SafelyBroadcastAction(ref WavesCompleted);
         }
         var wave = waves[currentWaveIndex];
         wave.WaveCompleted += NextWave;
         wave.BeginWave();
-        SafelyEmitEvent(ref WaveChanged);
+        SafeEventHandler.SafelyBroadcastAction(ref WaveChanged);
     }
 
     private void NextWave(object sender, EventArgTemplate<bool> success)
@@ -58,7 +58,7 @@ public class WaveController : MonoBehaviour
             currentWaveIndex++;
             if (currentWaveIndex >= waves.Count)
             {
-                SafelyEmitEvent(ref WavesCompleted);
+                SafeEventHandler.SafelyBroadcastAction(ref WavesCompleted);
             }
             else
             {

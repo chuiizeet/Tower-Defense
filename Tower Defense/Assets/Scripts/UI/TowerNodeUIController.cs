@@ -17,28 +17,11 @@ public class TowerNodeUIController : MonoBehaviour
     }
     private void OnTowerPurchased(object sender, EventArgTemplate<TowerConfiguration> purchasedTower)
     {
-        SafelyBroadcastEvent<TowerConfiguration>(ref PurchasedTower, purchasedTower.Attachment);
-    }
-
-    private void SafelyBroadcastEvent<T>(ref EventHandler<EventArgTemplate<T>> eventToBradcast, T dataToattach)
-    {
-        if (eventToBradcast != null)
-        {
-            var attachment = new EventArgTemplate<T>(dataToattach);
-            eventToBradcast.Invoke(this, attachment);
-        }
-    }
-
-    private void SafelyBroadcastAction(ref Action actionToBroadcast)
-    {
-        if (actionToBroadcast != null)
-        {
-            actionToBroadcast.Invoke();
-        }
+        SafeEventHandler.SafelyBroadcastEvent<TowerConfiguration>(ref PurchasedTower, purchasedTower.Attachment, this);
     }
 
     public void OnCloseSelected()
     {
-        SafelyBroadcastAction(ref CloseButtonPressed);
+        SafeEventHandler.SafelyBroadcastAction(ref CloseButtonPressed);
     }
 }
